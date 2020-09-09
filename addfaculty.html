@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS FILE LINK HERE-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="/css/bootstrap.min.css"></script>
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+
+    <!------------ TOP NAVIGATION STARTS HERE------>
+    <div class="header" id="header">
+      <a href="admindashboard.html" class="logo">
+        <b>Internship Portal</b>
+      </a>
+      <a href="admindashboard.html">Home</a>
+      <a href="#news">Branch</a>
+      <a href="#contact">Degree</a>
+      <a href="facultydashboard.html" class="active">Faculty</a>
+      <a href="#about">Student</a>
+      <a href="#about">Activity</a>
+
+      <a style="float: right">Hello,<b> Admin !</b></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-----------TOP NAVIGATION ENDS HERE----------->
+
+    <!-----------MAIN DIVISION STARTS HERE----------->
+    <div class="container">
+      <h4>Enter Faculty Details</h4>
+
+      <hr size="2" />
+
+      <!-----------------FORMS STARTS HERE------------------------->
+
+      <div method="" action="">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="facultyName">Faculty Name:</label>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="facultyName"
+                id="facultyName"
+                placeholder="Enter Faculty Name"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="selectBranch">Branch:</label>
+            <select id="selectBranch">
+              <option value="">Select Branch</option>
+              <!--this list will come from backend from branch table. Given data is for demo-->
+              <option value="">Mechanical Engineering</option>
+              <option value="">Computer Engineering</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-6">
+            <label for="emailID">Email ID:</label>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="emailID"
+                id="emailID"
+                placeholder="Enter Email ID"
+              />
+            </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="Password">Password:</label>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  name="Password"
+                  id="Password"
+                  placeholder="Enter Password"
+                />
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <!--BUTTON TO ADD -->
+          <button class="btn btn-default" id="addBranch">ADD</button>
+        </div>
+      </form>
+    </div>
+    <!-----------MAIN DIVISION ENDS HERE----------->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("header");
+        if (x.className === "header") {
+          x.className += " responsive";
+        } else {
+          x.className = "header";
+        }
+      }
+    </script>
+  </body>
+</html>

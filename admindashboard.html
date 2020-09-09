@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS FILE LINK HERE-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/css/bootstrap.min.css"></script>
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+
+    <!------------ TOP NAVIGATION STARTS HERE------>
+    <div class="header" id="header">
+      <a href="admindashboard.html" class="logo">
+        <b>Internship Portal</b>
+      </a>
+      <a href="#home" class="active">Home</a>
+      <a href="#news">Branch</a>
+      <a href="#contact">Degree</a>
+      <a href="facultydashboard.html">Faculty</a>
+      <a href="#about">Student</a>
+      <a href="#about">Activity</a>
+
+      <a style="float: right">Hello,<b> Admin !</b></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-----------TOP NAVIGATION ENDS HERE----------->
+
+    <!-----------MAIN DIVISION STARTS HERE----------->
+    <div class="container">
+      <!--THIS IS THE CARD ROW WHICH IS STATIC. ALL BELOW CONTENT WILL BE STATIC-->
+      <div class="row">
+        <!--Card1 ACTIVITY CARD-->
+        <div class="col-md-3">
+          <div class="cards" style="background-color: #3e978b">
+            <h5>Activity <span class="fa fa-calendar-check-o"></span></h5>
+            <div class="moreinfo">
+              <a href="">More Info <span class="fa fa-info-circle"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card2 FACULTY CARD-->
+        <div class="col-md-3">
+          <div class="cards" style="background-color: #436f8a">
+            <h5>Faculty <span class="fas fa-chalkboard-teacher"></span></h5>
+            <div class="moreinfo">
+              <a href="facultydashboard.html"
+                >More Info <span class="fa fa-info-circle"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card3 STUDENT CARD-->
+        <div class="col-md-3">
+          <div class="cards" style="background-color: #ec4d41">
+            <h5>Student <span class="fas fa-user-graduate"></span></h5>
+            <div class="moreinfo">
+              <a href=""> More Info <span class="fa fa-info-circle"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card4-->
+        <div class="col-md-3">
+          <div class="cards" style="background-color: #febf63">
+            <h5>Branch <span class="fas fa-award"></span></h5>
+            <div class="moreinfo">
+              <a href="branch.html">
+                More Info <span class="fa fa-info-circle"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card5-->
+        <div class="col-md-3">
+          <div class="cards" style="background-color: #4baad6">
+            <h5>Degree <span class="fas fa-graduation-cap"></span></h5>
+            <div class="moreinfo">
+              <a href=""> More Info <span class="fa fa-info-circle"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-----------MAIN DIVISION ENDS HERE----------->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("header");
+        if (x.className === "header") {
+          x.className += " responsive";
+        } else {
+          x.className = "header";
+        }
+      }
+    </script>
+  </body>
+</html>

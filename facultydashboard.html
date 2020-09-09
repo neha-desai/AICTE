@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS FILE LINK HERE-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/css/bootstrap.min.css"></script>
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+
+    <!------------ TOP NAVIGATION STARTS HERE------>
+    <div class="header" id="header">
+      <a href="admindashboard.html" class="logo">
+        <b>Internship Portal</b>
+      </a>
+      <a href="admindashboard.html">Home</a>
+      <a href="#news">Branch</a>
+      <a href="#contact">Degree</a>
+      <a href="facultydashboard.html" class="active">Faculty</a>
+      <a href="#about">Student</a>
+      <a href="#about">Activity</a>
+
+      <a style="float: right">Hello,<b> Admin !</b></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-----------TOP NAVIGATION ENDS HERE----------->
+
+    <!-----------MAIN DIVISION STARTS HERE----------->
+    <div class="container">
+      <h4>
+        <span class="fas fa-chalkboard-teacher"></span
+        ><span style="margin-left: 15px">Faculty</span>
+      </h4>
+
+      <!--BUTTON TO ADD -->
+      <a href="addfaculty.html">
+        <button class="btn btn-default" id="addBranch">
+          Add Faculty <span class="fa fa-plus"></span></button
+      ></a>
+
+      <hr size="2" />
+
+      <!--THE BOX BELOW WILL APPEAR ONLY AFTER REDIRECTING FROM ADD FACULTY PAGE, TILL THEN IT WILL BE HIDDEN. 
+        AFTER ADDING DETAILS PAGE WILL REDIRECT HERE AND THIS MSG WILL APPEAR-->
+      <div class="alert alert-success alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        Faculty details succesfully Added!
+      </div>
+      <!------------------------------ALERT BOX ENDS HERE--------------------------------------------------->
+
+      <!--------------------TABLE STARTS HERE-------------------------->
+
+      <!----Table controls like search,dropdown to sort by branch------>
+      <div class="tableControl">
+        <div class="row">
+          <div class="col-md-9">
+            <select style="padding: 7px 20px">
+              <option value="">Sort By Branch</option>
+              <!--this list will come from backend from branch table. Given data is for demo-->
+              <option value="">Mechanical Engineering</option>
+              <option value="">Computer Engineering</option>
+            </select>
+          </div>
+          <input type="text" placeholder="Search" id="searchBtn" required />
+        </div>
+      </div>
+      <br />
+
+      <!-----------------SAMPLE TABLE FOR FRONT END PURPOSE. DYNAMIC DATA-------------->
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Branch Name</th>
+              <th>Branch</th>
+              <th>EmailID</th>
+              <td></td>
+              <td></td>
+            </tr>
+          </thead>
+          <tr>
+            <td>Neha Desai</td>
+            <td>Computer Engineering</td>
+            <td>demo@example.com</td>
+            <td>
+              <a href="editfaculty.html"
+                ><span id="editbtn" class="fa fa-pencil" title="Edit"></span
+              ></a>
+            </td>
+            <td>
+              <span id="deletebtn" class="fa fa-trash-o" title="Delete"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Sanchit Mishra</td>
+            <td>Mechanical Engineering</td>
+            <td>demo@example.com</td>
+            <td><span class="fa fa-pencil"></span></td>
+            <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
+          </tr>
+          <tr>
+            <td>Sanchit Mishra</td>
+            <td>Electrical Engineering</td>
+            <td>demo@example.com</td>
+            <td><span class="fa fa-pencil"></span></td>
+            <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-----------MAIN DIVISION ENDS HERE----------->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("header");
+        if (x.className === "header") {
+          x.className += " responsive";
+        } else {
+          x.className = "header";
+        }
+      }
+    </script>
+  </body>
+</html>
