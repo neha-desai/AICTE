@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS FILE LINK HERE-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="/css/bootstrap.min.css"></script>
+    <script src="/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+
+    <!------------ TOP NAVIGATION STARTS HERE------>
+    <div class="header" id="header">
+      <a href="admindashboard.html" class="logo">
+        <b>Internship Portal</b>
+      </a>
+      <a href="admindashboard.html">Home</a>
+      <a href="branch.html">Branch</a>
+      <a href="degree.html">Degree</a>
+      <a href="facultydashboard.html">Faculty</a>
+      <a href="studentdashboard.html" class="active">Student</a>
+      <a href="activitydashboard.html">Activity</a>
+
+      <a style="float: right">Hello,<b> Admin !</b></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-----------TOP NAVIGATION ENDS HERE----------->
+
+    <!-----------MAIN DIVISION STARTS HERE----------->
+    <div class="container">
+      <h4>Enter Student Details</h4>
+
+      <hr size="2" />
+
+      <!-----------------FORMS STARTS HERE------------------------->
+
+      <form method="" action="">
+        <!--first row-->
+        <div class="row">
+          <div class="col-md-2">
+            <label for="RollNo">Roll Number:</label>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="RollNo"
+                id="RollNo"
+                placeholder="Enter Roll No."
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--second row-->
+        <div class="row">
+          <div class="col-md-6">
+            <label for="StudentName">Student Name:</label>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="StudentName"
+                id="StudentName"
+                placeholder="Enter Student Name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="mobileNo">Mobile Number:</label>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="mobileNo"
+                id="mobileNo"
+                placeholder="Enter Mobile Number"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--third row-->
+        <div class="row">
+          <div class="col-md-6">
+            <label for="emailID">Email ID:</label>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="emailID"
+                id="emailID"
+                placeholder="Enter EmailID"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="selectBranch">Branch:</label>
+            <select id="selectBranch">
+              <option value="">Select Branch</option>
+              <!--this list will come from backend from branch table. Given data is for demo-->
+              <option value="">Mechanical Engineering</option>
+              <option value="">Computer Engineering</option>
+            </select>
+          </div>
+        </div>
+
+        <!--fourth row-->
+        <div class="row">
+          <div class="col-md-6">
+            <label for="password">Enter Password:</label>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                placeholder="Enter Password"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="password">Re-Enter Password:</label>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control"
+                name="repassword"
+                id="repassword"
+                placeholder="Re-Enter Password"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--fifth row-->
+        <div class="row">
+          <div class="col-md-6">
+            <label for="selectBranch">Degree Type:</label>
+            <select id="selectBranch">
+              <option value="">Select Degree</option>
+              <!--this list will come from backend from branch table. Given data is for demo-->
+              <option value="">BTECH</option>
+              <option value="">BE</option>
+            </select>
+          </div>
+        </div>
+
+        <!--sixth row-->
+        <div class="row">
+          <div class="col-md-6">
+            <label>Admission Type:</label><br />
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio" />
+                Regular
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio" />
+                Direct Second Year (DSE)
+              </label>
+            </div>
+          </div>
+        </div>
+        <br />
+        <input
+          type="submit"
+          value="ADD"
+          class="btn btn-default"
+          id="addStudent"
+          onclick="reEnterpassword()"
+        />
+      </form>
+    </div>
+    <!-----------MAIN DIVISION ENDS HERE----------->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("header");
+        if (x.className === "header") {
+          x.className += " responsive";
+        } else {
+          x.className = "header";
+        }
+      }
+
+      function reEnterpassword() {
+        var pass = document.getElementById("password").value;
+        var repass = document.getElementById("repassword").value;
+
+        if (pass != repass) {
+          swal("Passwords do not match");
+        }
+      }
+    </script>
+  </body>
+</html>

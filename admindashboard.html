@@ -24,14 +24,14 @@
       <a href="admindashboard.html" class="logo">
         <b>Internship Portal</b>
       </a>
-      <a href="#home" class="active">Home</a>
-      <a href="#news">Branch</a>
-      <a href="#contact">Degree</a>
+      <a href="admindashboard.html" class="active">Home</a>
+      <a href="branch.html">Branch</a>
+      <a href="degree.html">Degree</a>
       <a href="facultydashboard.html">Faculty</a>
-      <a href="#about">Student</a>
-      <a href="#about">Activity</a>
+      <a href="studentdashboard.html">Student</a>
+      <a href="activitydashboard.html">Activity</a>
 
-      <a style="float: right">Hello,<b> Admin !</b></a>
+      <a class="userWelcome">Hello,<b> Admin !</b></a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
@@ -44,7 +44,7 @@
       <div class="row">
         <!--Card1 ACTIVITY CARD-->
         <div class="col-md-3">
-          <div class="cards" style="background-color: #3e978b">
+          <div class="cards" id="activityCards">
             <h5>Activity <span class="fa fa-calendar-check-o"></span></h5>
             <div class="moreinfo">
               <a href="">More Info <span class="fa fa-info-circle"></span></a>
@@ -54,7 +54,7 @@
 
         <!--Card2 FACULTY CARD-->
         <div class="col-md-3">
-          <div class="cards" style="background-color: #436f8a">
+          <div class="cards" id="facultyCards">
             <h5>Faculty <span class="fas fa-chalkboard-teacher"></span></h5>
             <div class="moreinfo">
               <a href="facultydashboard.html"
@@ -66,17 +66,19 @@
 
         <!--Card3 STUDENT CARD-->
         <div class="col-md-3">
-          <div class="cards" style="background-color: #ec4d41">
+          <div class="cards" id="studentCards">
             <h5>Student <span class="fas fa-user-graduate"></span></h5>
             <div class="moreinfo">
-              <a href=""> More Info <span class="fa fa-info-circle"></span></a>
+              <a href="studentdashboard.html">
+                More Info <span class="fa fa-info-circle"></span
+              ></a>
             </div>
           </div>
         </div>
 
-        <!--Card4-->
+        <!--Card4 BRANCH CARD-->
         <div class="col-md-3">
-          <div class="cards" style="background-color: #febf63">
+          <div class="cards" id="branchCards">
             <h5>Branch <span class="fas fa-award"></span></h5>
             <div class="moreinfo">
               <a href="branch.html">
@@ -86,12 +88,14 @@
           </div>
         </div>
 
-        <!--Card5-->
+        <!--Card5 DEGREE CARD-->
         <div class="col-md-3">
-          <div class="cards" style="background-color: #4baad6">
+          <div class="cards" id="degreeCards">
             <h5>Degree <span class="fas fa-graduation-cap"></span></h5>
             <div class="moreinfo">
-              <a href=""> More Info <span class="fa fa-info-circle"></span></a>
+              <a href="degree.html">
+                More Info <span class="fa fa-info-circle"></span
+              ></a>
             </div>
           </div>
         </div>

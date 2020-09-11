@@ -31,10 +31,10 @@
         <b>Internship Portal</b>
       </a>
       <a href="admindashboard.html">Home</a>
-      <a href="branch.html" class="active">Branch</a>
+      <a href="branch.html">Branch</a>
       <a href="degree.html">Degree</a>
       <a href="facultydashboard.html">Faculty</a>
-      <a href="studentdashboard.html">Student</a>
+      <a href="studentdashboard.html" class="active">Student</a>
       <a href="activitydashboard.html">Activity</a>
 
       <a style="float: right">Hello,<b> Admin !</b></a>
@@ -46,23 +46,13 @@
 
     <!-----------MAIN DIVISION STARTS HERE----------->
     <div class="container">
-      <h4>Branch</h4>
+      <h4>Student</h4>
       <br />
       <!--BUTTON TO ADD -->
-      <div class="row">
-        <div class="col-md-9">
-          <input
-            type="text"
-            name="branchName"
-            id="branchName"
-            class="form-control"
-            placeholder="Enter Branch Name"
-          />
-        </div>
+      <a href="addstudent.html">
         <button class="btn btn-default" id="addBranch">
-          Add Branch <span class="fa fa-plus"></span>
-        </button>
-      </div>
+          Add Student <span class="fa fa-plus"></span></button
+      ></a>
 
       <hr size="2" />
 
@@ -72,12 +62,26 @@
         <button type="button" class="close" data-dismiss="alert">
           &times;
         </button>
-        Branch details succesfully Added!
+        Student details succesfully Added!
       </div>
       <!------------------------------ALERT BOX ENDS HERE--------------------------------------------------->
 
       <!--------------------TABLE STARTS HERE-------------------------->
 
+      <!----Table controls like search,dropdown to sort by branch------>
+      <div class="tableControl">
+        <div class="row">
+          <div class="col-md-9">
+            <select style="padding: 7px 20px">
+              <option value="">Sort By Branch</option>
+              <!--this list will come from backend from branch table. Given data is for demo-->
+              <option value="">Mechanical Engineering</option>
+              <option value="">Computer Engineering</option>
+            </select>
+          </div>
+          <input type="text" placeholder="Search" id="searchBtn" required />
+        </div>
+      </div>
       <br />
 
       <!-----------------SAMPLE TABLE FOR FRONT END PURPOSE. DYNAMIC DATA-------------->
@@ -86,12 +90,20 @@
           <thead>
             <tr>
               <th>Branch Name</th>
+              <th>Branch</th>
+              <th>EmailID</th>
+              <th>Admission Type</th>
+              <th>Degree</th>
               <td></td>
               <td></td>
             </tr>
           </thead>
           <tr>
+            <td>Neha Desai</td>
             <td>Computer Engineering</td>
+            <td>demo@example.com</td>
+            <td>Regular</td>
+            <td>BTECH</td>
             <td>
               <a href="editfaculty.html"
                 ><span id="editbtn" class="fa fa-pencil" title="Edit"></span
@@ -103,13 +115,20 @@
           </tr>
 
           <tr>
+            <td>Sanchit Mishra</td>
             <td>Mechanical Engineering</td>
-
+            <td>demo@example.com</td>
+            <td>DSE</td>
+            <td>BTECH</td>
             <td><span class="fa fa-pencil"></span></td>
             <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
           </tr>
           <tr>
+            <td>Sanchit Mishra</td>
             <td>Electrical Engineering</td>
+            <td>demo@example.com</td>
+            <td>Regular</td>
+            <td>BTECH</td>
             <td><span class="fa fa-pencil"></span></td>
             <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
           </tr>

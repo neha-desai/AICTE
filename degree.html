@@ -31,8 +31,8 @@
         <b>Internship Portal</b>
       </a>
       <a href="admindashboard.html">Home</a>
-      <a href="branch.html" class="active">Branch</a>
-      <a href="degree.html">Degree</a>
+      <a href="branch.html">Branch</a>
+      <a href="degree.html" class="active">Degree</a>
       <a href="facultydashboard.html">Faculty</a>
       <a href="studentdashboard.html">Student</a>
       <a href="activitydashboard.html">Activity</a>
@@ -46,11 +46,11 @@
 
     <!-----------MAIN DIVISION STARTS HERE----------->
     <div class="container">
-      <h4>Branch</h4>
+      <h4>Degree</h4>
       <br />
       <!--BUTTON TO ADD -->
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-4">
           <input
             type="text"
             name="branchName"
@@ -59,8 +59,17 @@
             placeholder="Enter Branch Name"
           />
         </div>
+        <div class="col-md-4">
+          <input
+            type="text"
+            name="branchName"
+            id="branchName"
+            class="form-control"
+            placeholder="Enter No.of Years"
+          />
+        </div>
         <button class="btn btn-default" id="addBranch">
-          Add Branch <span class="fa fa-plus"></span>
+          Add Degree <span class="fa fa-plus"></span>
         </button>
       </div>
 
@@ -72,7 +81,7 @@
         <button type="button" class="close" data-dismiss="alert">
           &times;
         </button>
-        Branch details succesfully Added!
+        Degree details succesfully Added!
       </div>
       <!------------------------------ALERT BOX ENDS HERE--------------------------------------------------->
 
@@ -85,31 +94,21 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Branch Name</th>
+              <th>Degree Name</th>
+              <th>Year</th>
               <td></td>
               <td></td>
             </tr>
           </thead>
           <tr>
-            <td>Computer Engineering</td>
-            <td>
-              <a href="editfaculty.html"
-                ><span id="editbtn" class="fa fa-pencil" title="Edit"></span
-              ></a>
-            </td>
-            <td>
-              <span id="deletebtn" class="fa fa-trash-o" title="Delete"></span>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Mechanical Engineering</td>
-
+            <td>BTECH</td>
+            <td>4</td>
             <td><span class="fa fa-pencil"></span></td>
             <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
           </tr>
           <tr>
-            <td>Electrical Engineering</td>
+            <td>BE</td>
+            <td>4</td>
             <td><span class="fa fa-pencil"></span></td>
             <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
           </tr>
