@@ -31,11 +31,11 @@
         <b>Internship Portal</b>
       </a>
       <a href="admindashboard.html">Home</a>
-      <a href="branch.html" class="active">Branch</a>
+      <a href="branch.html">Branch</a>
       <a href="degree.html">Degree</a>
       <a href="facultydashboard.html">Faculty</a>
       <a href="studentdashboard.html">Student</a>
-      <a href="activitydashboard.html">Activity</a>
+      <a href="activitydashboard.html" class="active">Activity</a>
 
       <a style="float: right">Hello,<b> Admin !</b></a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -46,24 +46,34 @@
 
     <!-----------MAIN DIVISION STARTS HERE----------->
     <div class="container">
-      <h4>Branch</h4>
+      <h4>Activity</h4>
       <br />
       <!--BUTTON TO ADD -->
       <div class="row">
-        <div class="col-md-9">
-          <input
-            type="text"
-            name="branchName"
-            id="branchName"
-            class="form-control"
-            placeholder="Enter Branch Name"
-          />
+          <div class="col-md-2"></div>
+        <!--Add Category-->
+        <div class="col-md-2">
+          <button class="btn btn-default" id="addCategoryModal" onclick="turnonoverlay()">
+            Add Category <span class="fa fa-plus"></span>
+          </button>
         </div>
-        <button class="btn btn-default" id="addBranch">
-          Add Branch <span class="fa fa-plus"></span>
-        </button>
-      </div>
 
+        <div class="col-md-1"></div>
+
+        <!--Add Activty-->
+        <div class="col-md-2">
+         <a href="addactivity.html"> <button class="btn btn-default" id="addactivity">
+            Add Activty <span class="fa fa-calendar-plus-o"></span>
+          </button></a>
+        </div>
+        <div class="col-md-1"></div>
+        <!--Faculty mapping-->
+        <div class="col-md-2">
+          <button class="btn btn-default" id="mapfaculty">
+            Assign Faculty <span class="fa fa-user-plus"></span>
+          </button>
+        </div>
+      </div>
       <hr size="2" />
 
       <!--THE BOX BELOW WILL APPEAR ONLY AFTER REDIRECTING FROM ADD FACULTY PAGE, TILL THEN IT WILL BE HIDDEN. 
@@ -72,12 +82,27 @@
         <button type="button" class="close" data-dismiss="alert">
           &times;
         </button>
-        Branch details succesfully Added!
+        Details succesfully Added!
       </div>
       <!------------------------------ALERT BOX ENDS HERE--------------------------------------------------->
 
       <!--------------------TABLE STARTS HERE-------------------------->
 
+      <!----Table controls like search,dropdown to sort by branch------>
+      <div class="tableControl">
+        <div class="row">
+          <div class="col-md-9">
+            <select style="padding: 7px 20px">
+              <option value="">Sort By Category</option>
+              <!--this list will come from backend from branch table. Given data is for demo-->
+              <option value="">TnP</option>
+              <option value="">CSI</option>
+            </select>
+          </div>
+          <input type="text" placeholder="Search" id="searchBtn" required />
+          <button class="btn btn-light">Search</button>
+        </div>
+      </div>
       <br />
 
       <!-----------------SAMPLE TABLE FOR FRONT END PURPOSE. DYNAMIC DATA-------------->
@@ -86,19 +111,22 @@
           <thead>
             <tr>
               <th>Branch Name</th>
+              <th>Branch</th>
+              <th>EmailID</th>
+              <th>Admission Type</th>
+              <th>Degree</th>
               <td></td>
               <td></td>
             </tr>
           </thead>
           <tr>
+            <td>Neha Desai</td>
             <td>Computer Engineering</td>
+            <td>demo@example.com</td>
+            <td>Regular</td>
+            <td>BTECH</td>
             <td>
-              <span
-                onclick="turnonoverlay()"
-                id="editbtn"
-                class="fa fa-pencil"
-                title="Edit"
-              ></span>
+              <span id="editbtn" class="fa fa-pencil" title="Edit"></span>
             </td>
             <td>
               <span id="deletebtn" class="fa fa-trash-o" title="Delete"></span>
@@ -106,38 +134,43 @@
           </tr>
 
           <tr>
+            <td>Sanchit Mishra</td>
             <td>Mechanical Engineering</td>
-
+            <td>demo@example.com</td>
+            <td>DSE</td>
+            <td>BTECH</td>
             <td><span class="fa fa-pencil"></span></td>
             <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
           </tr>
           <tr>
+            <td>Sanchit Mishra</td>
             <td>Electrical Engineering</td>
+            <td>demo@example.com</td>
+            <td>Regular</td>
+            <td>BTECH</td>
             <td><span class="fa fa-pencil"></span></td>
             <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
           </tr>
         </table>
       </div>
 
-      <!--OVERLAY DIVISION-->
+      <!--ADD CATEGORY MODAL-->
       <div class="overlay" id="overlay">
         <div class="overlay-content">
           <div class="crossbtn" id="crossbtn" onclick="turnoffoverlay()">
             <span class="fa fa-times"></span>
           </div>
 
-          <h4>Edit Branch</h4>
+          <h4>Add Category</h4>
           <br />
-
-          <!--TXT BOX WHICH WILL CONTAIN BRANCH NAME FROM BACKEND-->
           <div class="row">
             <div class="col-md-12">
-              <label for="EditbranchName">Branch Name:</label>
+              <label for="categoryName">Category Name:</label>
               <input
                 type="text"
                 type="text"
-                name="EditbranchName"
-                id="EditbranchName"
+                name="categoryName"
+                id="categoryName"
                 class="form-control"
               />
             </div>
@@ -145,13 +178,17 @@
           <br />
           <div class="row">
             <div class="col-md-6">
-              <button class="btn btn-default" id="editBranch">
-                Update Details <span class="fa fa-check-circle"></span>
+              <button class="btn btn-default" id="addCategory">
+                Add Category <span class="fa fa-plus"></span>
               </button>
             </div>
-          </div>
+          </div>       
+        </div>
         </div>
       </div>
+    
+
+
     </div>
     <!-----------MAIN DIVISION ENDS HERE----------->
 

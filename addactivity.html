@@ -41,7 +41,7 @@
 
     <!-----------MAIN DIVISION STARTS HERE----------->
     <div class="container">
-      <h4>Enter Student Details</h4>
+      <h4>Enter Activity Details</h4>
 
       <hr size="2" />
 
@@ -50,14 +50,14 @@
       <form method="" action="">
         <!--first row-->
         <div class="row">
-          <div class="col-md-2">
-            <label for="RollNo">Roll Number:</label>
+          <div class="col-md-8">
+            <label for="activtyname">Activity Name:</label>
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
-                name="RollNo"
-                id="RollNo"
+                name="activtyname"
+                id="activtyname"
                 required
               />
             </div>
@@ -66,27 +66,27 @@
 
         <!--second row-->
         <div class="row">
-          <div class="col-md-6">
-            <label for="StudentName">Student Name:</label>
+          <div class="col-md-2">
+            <label for="hours">Hours:</label>
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
-                name="StudentName"
-                id="StudentName"
+                name="hours"
+                id="hours"
                 required
               />
             </div>
           </div>
 
-          <div class="col-md-6">
-            <label for="mobileNo">Mobile Number:</label>
+          <div class="col-md-2">
+            <label for="points">Points:</label>
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
-                name="mobileNo"
-                id="mobileNo"
+                name="points"
+                id="points"
                 required
               />
             </div>
@@ -98,13 +98,12 @@
           <div class="col-md-6">
             <label for="emailID">Email ID:</label>
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                name="emailID"
-                id="emailID"
-                required
-              />
+              <div class="input-group date" id="datetimepicker1">
+                <input type="text" class="form-control" />
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+              </div>
             </div>
           </div>
 
@@ -206,15 +205,6 @@
           x.className += " responsive";
         } else {
           x.className = "header";
-        }
-      }
-
-      function reEnterpassword() {
-        var pass = document.getElementById("password").value;
-        var repass = document.getElementById("repassword").value;
-
-        if (pass != repass) {
-          swal("Passwords do not match");
         }
       }
     </script>
