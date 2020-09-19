@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS FILE LINK HERE-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="/jquery.min.js"></script>
+    <script src="/css/bootstrap.min.css"></script>
+    <script src="/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+
+    <!------------ TOP NAVIGATION STARTS HERE------>
+    <div class="header" id="header">
+      <a href="admindashboard.html" class="logo">
+        <b>Internship Portal</b>
+      </a>
+      <a href="admindashboard.html">Home</a>
+      <a href="branch.html">Branch</a>
+      <a href="degree.html">Degree</a>
+      <a href="facultydashboard.html">Faculty</a>
+      <a href="studentdashboard.html">Student</a>
+      <a href="activitydashboard.html" class="active">Activity</a>
+
+      <a style="float: right">Hello,<b> Admin !</b></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-----------TOP NAVIGATION ENDS HERE----------->
+
+    <!-----------MAIN DIVISION STARTS HERE----------->
+    <div class="container">
+      <h4>Enter Activity Details</h4>
+
+      <hr size="2" />
+
+      <!-----------------FORMS STARTS HERE------------------------->
+
+      <form method="" action="">
+        <!--first row-->
+        <div class="row">
+          <div class="col-md-8">
+            <label for="activtyname">Activity Name:</label>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="activtyname"
+                id="activtyname"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--second row-->
+        <div class="row">
+          <div class="col-md-8">
+            <label for="categoryDropdown">Category:</label>
+            <select id="categoryDropdown">
+              <option value="">Select Category</option>
+              <option value="">CSI</option>
+            </select>
+          </div>
+        </div>
+
+        <!--third row-->
+        <div class="row">
+          <div class="col-md-2">
+            <label for="hours">Hours:</label>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="hours"
+                id="hours"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <label for="points">Points:</label>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="points"
+                id="points"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--fourth row-->
+        <div class="row">
+          <div class="col-md-4">
+            <label for="startDate">Start Date:</label>
+            <div class="form-group">
+              <input
+                type="date"
+                class="form-control"
+                name="startDate"
+                id="startDate"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="startDate">End Date:</label>
+            <div class="form-group">
+              <input
+                type="date"
+                class="form-control"
+                name="startDate"
+                id="startDate"
+              />
+            </div>
+          </div>
+        </div>
+        <br />
+        <!--fifth row-->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="custom-control custom-checkbox mb-3">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="certificate"
+                name="certificate"
+              />
+              <label class="custom-control-label" for="certificate"
+                >CERTIFICATION REQUIRED?</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <!--SUBMIT BTN-->
+        <!--AFTER CLICKING ON THIS BTN ADMIN WILL BE DIRECTED TO FACULTY MAPPING PAGE WITH ACTIVITY NAME AND CATEGORY DETAILS-->
+        <input
+          type="submit"
+          value="ADD"
+          class="btn btn-default"
+          id="addactivity"
+        />
+      </form>
+    </div>
+    <!-----------MAIN DIVISION ENDS HERE----------->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("header");
+        if (x.className === "header") {
+          x.className += " responsive";
+        } else {
+          x.className = "header";
+        }
+      }
+    </script>
+  </body>
+</html>

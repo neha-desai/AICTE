@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS FILE LINK HERE-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="/css/bootstrap.min.css"></script>
+    <script src="/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--MULTIPLE VALUES SELCTION LINKS-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    ></script>
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+
+    <!------------ TOP NAVIGATION STARTS HERE------>
+    <div class="header" id="header">
+      <a href="admindashboard.html" class="logo">
+        <b>Internship Portal</b>
+      </a>
+      <a href="admindashboard.html">Home</a>
+      <a href="branch.html">Branch</a>
+      <a href="degree.html">Degree</a>
+      <a href="facultydashboard.html">Faculty</a>
+      <a href="studentdashboard.html">Student</a>
+      <a href="activitydashboard.html" class="active">Activity</a>
+
+      <a style="float: right">Hello,<b> Admin !</b></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-----------TOP NAVIGATION ENDS HERE----------->
+
+    <!-----------MAIN DIVISION STARTS HERE----------->
+    <div class="container">
+      <h4>Assign Faculty to Activity</h4>
+
+      <hr size="2" />
+      <!--CATEGORY NAME-->
+      <div class="row">
+        <div class="col-md-8">
+          <label for="categoryDropdown">Category:</label>
+          <select id="categoryDropdown">
+            <!--DEMO DATA-->
+            <option value="">Select Category</option>
+            <option value="">CSI</option>
+          </select>
+        </div>
+      </div>
+
+      <br />
+
+      <!--ACTIVITY NAME-->
+      <div class="row">
+        <div class="col-md-8">
+          <label for="activityDropdown">Activity:</label>
+          <select id="activityDropdown">
+            <!--DEMO DATA-->
+            <option value="">Select Activity</option>
+            <option value="">Paper Presentation</option>
+          </select>
+        </div>
+      </div>
+      <br />
+
+      <div class="row">
+        <div class="col-md-8">
+          <label for="multipleFaculty">Select Faculties:</label>
+          <select
+            class="js-example-basic-multiple"
+            name="states[]"
+            multiple="multiple"
+            id="multipleFaculty"
+          >
+            <!--DEMO DATA-->
+            <option value="AL">Neha</option>
+            <option value="DL">Sanchit</option>
+            <option value="MB">Omkar</option>
+            <option value="WY">Bimlesh</option>
+          </select>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-8">
+          <label>Access for Student:</label><br />
+          <div class="custom-control custom-radio custom-control-inline">
+            <input
+              type="radio"
+              class="custom-control-input"
+              id="alldept"
+              name="access"
+            />
+            <label class="custom-control-label" for="alldept"
+              >All Departments</label
+            >
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input
+              type="radio"
+              class="custom-control-input"
+              id="onedept"
+              name="access"
+            />
+            <label class="custom-control-label" for="onedept"
+              >Only their department</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <input
+        type="submit"
+        value="ASSIGN"
+        class="btn btn-default"
+        id="assignFaculty"
+      />
+    </div>
+    <!-----------MAIN DIVISION ENDS HERE----------->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("header");
+        if (x.className === "header") {
+          x.className += " responsive";
+        } else {
+          x.className = "header";
+        }
+      }
+
+      //MULTIPLE SELECTION
+      $(document).ready(function () {
+        $(".js-example-basic-multiple").select2();
+      });
+    </script>
+  </body>
+</html>

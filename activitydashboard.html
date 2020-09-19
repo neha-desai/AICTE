@@ -50,10 +50,14 @@
       <br />
       <!--BUTTON TO ADD -->
       <div class="row">
-          <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
         <!--Add Category-->
         <div class="col-md-2">
-          <button class="btn btn-default" id="addCategoryModal" onclick="turnonoverlay()">
+          <button
+            class="btn btn-default"
+            id="addCategoryModal"
+            onclick="turnonoverlay()"
+          >
             Add Category <span class="fa fa-plus"></span>
           </button>
         </div>
@@ -62,21 +66,23 @@
 
         <!--Add Activty-->
         <div class="col-md-2">
-         <a href="addactivity.html"> <button class="btn btn-default" id="addactivity">
-            Add Activty <span class="fa fa-calendar-plus-o"></span>
-          </button></a>
+          <a href="addactivity.html">
+            <button class="btn btn-default" id="addactivity">
+              Add Activty <span class="fa fa-calendar-plus-o"></span></button
+          ></a>
         </div>
         <div class="col-md-1"></div>
         <!--Faculty mapping-->
         <div class="col-md-2">
-          <button class="btn btn-default" id="mapfaculty">
-            Assign Faculty <span class="fa fa-user-plus"></span>
-          </button>
+          <a href="mapfaculty.html">
+            <button class="btn btn-default" id="mapfaculty">
+              Assign Faculty <span class="fa fa-user-plus"></span></button
+          ></a>
         </div>
       </div>
       <hr size="2" />
 
-      <!--THE BOX BELOW WILL APPEAR ONLY AFTER REDIRECTING FROM ADD FACULTY PAGE, TILL THEN IT WILL BE HIDDEN. 
+      <!--THE BOX BELOW WILL APPEAR ONLY AFTER REDIRECTING FROM ADD PAGE, TILL THEN IT WILL BE HIDDEN. 
         AFTER ADDING DETAILS PAGE WILL REDIRECT HERE AND THIS MSG WILL APPEAR-->
       <div class="alert alert-success alert-dismissible fade show">
         <button type="button" class="close" data-dismiss="alert">
@@ -86,9 +92,7 @@
       </div>
       <!------------------------------ALERT BOX ENDS HERE--------------------------------------------------->
 
-    
-
-      <!--ADD CATEGORY MODAL-->
+      <!---------------------------------ADD CATEGORY MODAL----------------------------------->
       <div class="overlay" id="overlay">
         <div class="overlay-content">
           <div class="crossbtn" id="crossbtn" onclick="turnoffoverlay()">
@@ -116,13 +120,76 @@
                 Add Category <span class="fa fa-plus"></span>
               </button>
             </div>
-          </div>       
-        </div>
+          </div>
         </div>
       </div>
-    
 
+      <!--TABLE STARTS HERE-->
+      <!---------------------------------------TABLE CONTROLS---------------------------->
+      <div class="tableControl">
+        <div class="row">
+          <div class="col-md-9">
+            <select style="padding: 7px 20px">
+              <option value="">Sort By Category</option>
+              <!--this list will come from backend from branch table. Given data is for demo-->
+              <option value="">Multicon</option>
+              <option value="">CSI</option>
+            </select>
+          </div>
+          <input type="text" placeholder="Search" id="searchBtn" required />
+          <button class="btn btn-light">Search</button>
+        </div>
+      </div>
+      <br />
+      <!--TABLE STARTS HERE-->
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Category</th>
+              <th>Start Date</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </thead>
+          <tr>
+            <td>Paper Presentaion</td>
+            <td>Multicon-W</td>
+            <td>25-2-2020</td>
+            <td><a href="">View more</a></td>
+            <td>
+              <span
+                onclick="turnonoverlay()"
+                id="editbtn"
+                class="fa fa-pencil"
+                title="Edit"
+              ></span>
+            </td>
+            <td>
+              <span id="deletebtn" class="fa fa-trash-o" title="Delete"></span>
+            </td>
+          </tr>
 
+          <tr>
+            <td>Paper Presentaion</td>
+            <td>Multicon-W</td>
+            <td>25-2-2020</td>
+            <td><a href="">View more</a></td>
+            <td><span class="fa fa-pencil"></span></td>
+            <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
+          </tr>
+          <tr>
+            <td>Paper Presentaion</td>
+            <td>Multicon-W</td>
+            <td>25-2-2020</td>
+            <td><a href="">View more</a></td>
+            <td><span class="fa fa-pencil"></span></td>
+            <td><span id="deletebtn" class="fa fa-trash-o"></span></td>
+          </tr>
+        </table>
+      </div>
     </div>
     <!-----------MAIN DIVISION ENDS HERE----------->
 
