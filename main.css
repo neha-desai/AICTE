@@ -120,6 +120,7 @@ a.userWelcome {
 }
 
 #addBranch,
+#addFaculty,
 #addStudent,
 #addDegree,
 #addStudent,
@@ -138,7 +139,9 @@ a.userWelcome {
 
 #addBranch:hover,
 #addStudent:hover,
-#addDegree:hover #addStudent:hover,
+#addFaculty:hover,
+#addDegree:hover,
+#addStudent:hover,
 #editBranch:hover,
 #addCategory:hover,
 #addactivity:hover,
