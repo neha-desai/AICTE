@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS FILE LINK HERE-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/css/bootstrap.min.css"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/jquery.min.js"></script>
+    <title>Activity Portal</title>
+  </head>
+  <body style="background-color: #f6f8fa">
+    <!--Side Navbar-->
+
+    <div id="sideNavbar" class="sideNavbar">
+      <a href="studentLoginDash.html"></span>Dashboard</a>
+      <a href="enrollForActivity.html"> Enroll for Activity</a>
+      <a href="#">Activity Status</a>
+      <a href="#">Approved Activity</a>
+    </div>
+
+    <div id="main" class="openmain">
+      <div class="topNav">
+        <span style="font-size: 24px; cursor: pointer" onclick="closeNav()"
+          >&#9776;
+        </span>
+
+        <div class="profile">
+          <span class="far fa-user-circle"></span> Neha Desai!
+          <a href="#" data-toggle="tooltip" title="Logout">
+            <span class="fas fa-power-off" alt="logout"></span
+          ></a>
+        </div>
+      </div>
+
+      <div class="maindivs" id="pageHeading">Enroll for Activity</div>
+
+      <div class="maindivs">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="selectDrp">Select Category:</label>
+            <select id="selectDrp">
+              <option value="">Select Category</option>
+              <!--this list will come from backend from category table. Given data is for demo-->
+              <option value="">CSI</option>
+              <option value="">Multicon</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-6">
+            <label for="selectDrp">Select Activity:</label>
+            <select id="selectDrp">
+              <option value="">Select Activity</option>
+              <!--this list will come from backend from category table. Given data is for demo-->
+              <option value="">Paper Presentation</option>
+              <option value="">Workshop</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-6">
+            <label>Upload your Certificate:</label><br>
+            <label for="uploadFile" id="uploadcerti"><span class="fas fa-file-upload"></span></label>
+            <input type="file" name="uploadFile" id="uploadFile">
+            </select>
+          </div>
+        </div>
+<br>
+<div class="btnDiv">
+        <button class="btn" id="applybtn">Apply</button>
+      </div>
+      </div>
+    </div>
+
+    <script>
+      function closeNav() {
+        var sidebar = document.getElementById("sideNavbar");
+        var mainDiv = document.getElementById("main");
+
+        if (sidebar.className === "sideNavbar") {
+          sidebar.classList.add("closebar");
+          mainDiv.classList.add("closemain");
+        } else {
+          sidebar.classList.remove("closebar");
+          mainDiv.classList.remove("closemain");
+        }
+      }
+
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
+</html>

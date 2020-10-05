@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS FILE LINK HERE-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/css/bootstrap.min.css"></script>
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <!-- NAVBAR-->
+
+    <!------------ TOP NAVIGATION STARTS HERE------>
+    <div class="header" id="header">
+      <a href="admindashboard.html" class="logo">
+        <b>Activity Portal</b>
+      </a>
+      <a href="admindashboard.html">Home</a>
+      <a href="branch.html">Branch</a>
+      <a href="degree.html">Degree</a>
+      <a href="facultydashboard.html">Faculty</a>
+      <a href="studentdashboard.html">Student</a>
+      <a href="activitydashboard.html" class="active">Activity</a>
+
+      <a style="float: right">Hello,<b> Admin !</b></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-----------TOP NAVIGATION ENDS HERE----------->
+
+    <!-----------MAIN DIVISION STARTS HERE----------->
+    <div class="container">
+      <h4>Activity</h4>
+      <hr size="2" />
+
+      <h5>Paper Presentation</h5>
+      <div class="actDeails">
+        <b>Category:</b> Multicon-W <br /><br />
+
+        <b>Start Date:</b> 23 February, 2020<br />
+        <b>End Date:</b> 25 February, 2022 <br /><br />
+        <b>Hours:</b> 20 <br /><b>Points:</b> 10 <br /><br />
+
+        <b>Certifiction required? </b>YES<br /><br />
+        <b>Faculty Associated:</b><br />
+        <div class="facultyassoc">
+          <div class="facultyName">Neha Desai (CMPN)</div>
+          <div class="facultyName">Sanchit Mishra (CMPN)</div>
+          <div class="facultyName">Omkar Sawant (CMPN)</div>
+          <div class="facultyName">Bimlesh(CMPN)</div>
+        </div>
+      </div>
+
+      <br />
+      <div class="actionbtn">
+        <button class="btn btn-danger">
+          Delete <span class="fa fa-trash-o"></span>
+        </button>
+        <button class="btn btn-primary">
+          Edit <span class="fa fa-pencil"></span>
+        </button>
+      </div>
+    </div>
+    <!-----------MAIN DIVISION ENDS HERE----------->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("header");
+        if (x.className === "header") {
+          x.className += " responsive";
+        } else {
+          x.className = "header";
+        }
+      }
+    </script>
+  </body>
+</html>
