@@ -322,7 +322,11 @@ select {
   text-decoration: none;
   color: #aaaaaa;
 }
-
+.sideNavbar .webName {
+  color: rgb(55, 109, 211);
+  font-weight: 900;
+  padding-top: 10px;
+}
 .closebar {
   width: 0px;
 }
@@ -370,10 +374,31 @@ select {
 .maindivs {
   background-color: white;
   padding: 20px 20px 20px 20px;
-  margin-top: 30px;
-  margin-left: 10px;
+  margin: 30px 7px 0px 7px;
+}
+.ptsdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 160px;
 }
 
+.ptsdetails h1 {
+  font-size: 45px;
+}
+
+#completedPts {
+  color: #61b7a2;
+}
+
+#tobecompleted {
+  color: #e75d3b;
+}
+
+#noofact {
+  color: rgb(55, 109, 211);
+}
 #selectDrp {
   width: 100%;
   padding: 7px 20px;
@@ -406,7 +431,34 @@ select {
   background-color: rgb(55, 109, 211);
   color: white;
 }
+.maindivs p {
+  color: lightgray;
+}
+progress {
+  height: 35px;
+  width: 100%;
+  border-radius: 25px;
+}
 
+progress::-webkit-progress-value {
+  background: #70c9b3;
+}
+
+progress::-webkit-progress-bar {
+  background: rgb(248, 248, 248);
+}
+
+.progresspts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#tablebtn {
+  background-color: rgb(230, 230, 230);
+  border: 1px solid grey;
+  font-size: 13px;
+}
 @media screen and (max-width: 992px) {
   .header a:not(:first-child) {
     display: none;

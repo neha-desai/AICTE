@@ -27,10 +27,17 @@
     <!--Side Navbar-->
 
     <div id="sideNavbar" class="sideNavbar">
-      <a href="#"><span class="far fa-column"></span>Dashboard</a>
-      <a href="enrollForActivity.html"> Enroll for Activity</a>
-      <a href="#">Activity Status</a>
-      <a href="#">Approved Activity</a>
+      <a href="studentLoginDash.html" class="webName">ACTIVITY PORTAL</a><br />
+      <a href="#"><span class="fa fa-columns"></span> Dashboard</a>
+      <a href="enrollForActivity.html">
+        <span class="far fa-calendar-plus"></span> Enroll for Activity</a
+      >
+      <a href="activityStatus.html"
+        ><span class="far fa-calendar-times"></span> Activity Status</a
+      >
+      <a href="#"
+        ><span class="far fa-calendar-check"></span> Approved Activity</a
+      >
     </div>
 
     <div id="main" class="openmain">
@@ -44,6 +51,57 @@
           <a href="#" data-toggle="tooltip" title="Logout">
             <span class="fas fa-power-off" alt="logout"></span
           ></a>
+        </div>
+      </div>
+
+      <!--MAIN DIVS-->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="maindivs">
+            <h5>Your Progress:</h5>
+            <p>
+              You have to complete the targeted points so that you can appear
+              for your final year exams.
+            </p>
+
+            <progress
+              class="progress-bar progress-bar-success"
+              id="ptsprogress"
+              value="32"
+              max="100"
+            >
+              32%
+            </progress>
+            <div class="progresspts"><span>0</span><span>100</span></div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="maindivs">
+            <div class="ptsdetails" id="completedPts">
+              <h1>30</h1>
+              Points completed till now
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="maindivs">
+            <div class="ptsdetails" id="tobecompleted">
+              <h1>70</h1>
+              Points to be complete
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="maindivs">
+            <div class="ptsdetails" id="noofact">
+              <h1>10</h1>
+              Activities participated
+            </div>
+          </div>
         </div>
       </div>
     </div>
