@@ -28,16 +28,10 @@
 
     <div id="sideNavbar" class="sideNavbar">
       <a href="studentLoginDash.html" class="webName">ACTIVITY PORTAL</a><br />
-      <a href="studentLoginDash.html"><span class="fa fa-columns"></span> Dashboard</a>
-      <a href="enrollForActivity.html">
-        <span class="far fa-calendar-plus"></span> Enroll for Activity</a
-      >
-      <a href="activityStatus.html"
-        ><span class="far fa-calendar-times"></span> Activity Status</a
-      >
-      <a href="approvedact.html"
-        ><span class="far fa-calendar-check"></span> Approved Activity</a
-      >
+      <a href="studentLoginDash.html">Dashboard</a>
+      <a href="enrollForActivity.html">Approve Students</a>
+      <a href="activityStatus.html">Rejected Students</a>
+      <a href="approvedact.html">Approved Students</a>
     </div>
 
     <div id="main" class="openmain">
@@ -57,59 +51,94 @@
       <!--MAIN DIVS-->
 
       <!--TABLE -->
-<div class="maindivs" id="pageHeading"> Pending/Rejected Activties: </div>
+<div class="maindivs">  
+
+    <div class="row">
+
+
+    <!--DROPDOWN TO FILTER DEPT WISE-->
+    <div class="col-md-2">
+    <select id="sortdrp">
+    <option value="">Sort By Branch</option>
+    <!--this list will come from backend from dept table. Given data is for demo-->
+    <option value="">Computer Engineering</option>
+    <option value="">Mechanical Engineering</option>
+  </select>
+</div>
+
+    <!--DROPDOWN TO FILTER DEGREE WISE-->
+    <div class="col-md-7">
+  <select id="sortdrp">
+    <option value="">Sort By Degree</option>
+    <!--this list will come from backend from dept table. Given data is for demo-->
+    <option value="">BTECH</option>
+    <option value="">BTECH</option>
+  </select>
+</div>
+
+  <input type="text" placeholder="Search" id="searchBtn" required />
+  <button class="btn btn-light" id="search">Search</button>
+</div>
+</div>
 
 <div class="maindivs">
-
+<b>Approve Students:</b> Paper Presentation<br><br>
       <div class="table-responsive">          
         <table class="table table-striped">
           <thead>
             <tr>
               <th>No.</th>
-              <th>Activity Name</th>
-              <th>Status</th>
-              <th>Category Name</th>
-              <th>Start Date</th>
-              <th>Setting</th>
+              <th>Student Name</th>
+              <th>Year</th>
+              <th>Division</th>
+              <th>Roll No. </th>
+              <th></th>
+              
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>1</td>
-              <td>Paper Presentation</td>
-              <td><button class="btn btn-primary">Pending</button></td>
-              <td>CSI</td>
-              <td>22 Februray,2020</td>
-              <td><button class="btn" id="tablebtn">Delete</button></td>
+              <td>Neha Desai</td>
+              <td>TE</td>
+              <td>A</td>
+              <td>68</td>
+              <td><button class="btn btn-primary">Display</button>
+              <button class="btn btn-success">Approve</button>
+              <button class="btn btn-danger">Reject</button></td>
             </tr>
 
             <tr>
-              <td>2</td>
-              <td>Workshop</td>
-              <td><button class="btn btn-danger">Rejected</button></td>
-              <td>CSI</td>
-              <td>22 Februray,2020</td>
-              <td><button class="btn" id="tablebtn">Delete</button> <button class="btn" id="tablebtn">Re-Enroll</button></td>
+                <td>2</td>
+                <td>Neha Desai</td>
+                <td>TE</td>
+                <td>A</td>
+                <td>68</td>
+                <td><button class="btn btn-primary">Display</button>
+                <button class="btn btn-success">Approve</button>
+                <button class="btn btn-danger">Reject</button></td>
               </tr>
-
               <tr>
                 <td>3</td>
-                <td>Paper Presentation</td>
-                <td><button class="btn btn-primary">Pending</button></td>
-                <td>CSI</td>
-                <td>22 Februray,2020</td>
-                <td><button class="btn" id="tablebtn">Delete</button></td>
+                <td>Neha Desai</td>
+                <td>TE</td>
+                <td>A</td>
+                <td>68</td>
+                <td><button class="btn btn-primary">Display</button>
+                <button class="btn btn-success">Approve</button>
+                <button class="btn btn-danger">Reject</button></td>
               </tr>
-            
               <tr>
-                <td>4</td>
-                <td>Paper Presentation</td>
-                <td><button class="btn btn-primary">Pending</button></td>
-                <td>CSI</td>
-                <td>22 Februray,2020</td>
-                <td><button class="btn" id="tablebtn">Delete</button></td>
+                <td>4 </td>
+                <td>Neha Desai</td>
+                <td>TE</td>
+                <td>A</td>
+                <td>68</td>
+                <td><button class="btn btn-primary">Display</button>
+                <button class="btn btn-success">Approve</button>
+                <button class="btn btn-danger">Reject</button></td>
               </tr>
-             
+       
           </tbody>
         </table>
         </div>

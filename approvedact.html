@@ -28,15 +28,15 @@
 
     <div id="sideNavbar" class="sideNavbar">
       <a href="studentLoginDash.html" class="webName">ACTIVITY PORTAL</a><br />
-      <a href="studentLoginDash.html"><span class="fa fa-columns"></span>  Dashboard</a>
+      <a href="studentLoginDash.html"><span class="fa fa-columns"></span> Dashboard</a>
       <a href="enrollForActivity.html">
-        <span class="far fa-calendar-plus"></span>  Enroll for Activity</a
+        <span class="far fa-calendar-plus"></span> Enroll for Activity</a
       >
       <a href="activityStatus.html"
-        ><span class="far fa-calendar-times"></span>  Activity Status</a
+        ><span class="far fa-calendar-times"></span> Activity Status</a
       >
       <a href="approvedact.html"
-        ><span class="far fa-calendar-check"></span>  Approved Activity</a
+        ><span class="far fa-calendar-check"></span> Approved Activity</a
       >
     </div>
 
@@ -54,47 +54,63 @@
         </div>
       </div>
 
-      <div class="maindivs" id="pageHeading"><h5>Enroll for Activity</h5></div>
+      <!--MAIN DIVS-->
 
-      <div class="maindivs">
-        <div class="row">
-          <div class="col-md-6">
-            <label for="selectDrp">Select Category:</label>
-            <select id="selectDrp">
-              <option value="">Select Category</option>
-              <!--this list will come from backend from category table. Given data is for demo-->
-              <option value="">CSI</option>
-              <option value="">Multicon</option>
-            </select>
-          </div>
+      <!--TABLE -->
+<div class="maindivs" id="pageHeading"> Approved Activites: </div>
+
+<div class="maindivs">
+
+      <div class="table-responsive">          
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Activity Name</th>
+              <th>Category Name</th>
+              <th>Start Date</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Paper Presentation</td>
+              <td>CSI</td>
+              <td>22 Februray,2020</td>
+              <td>5</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Paper Presentation</td>
+                <td>CSI</td>
+                <td>22 Februray,2020</td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Paper Presentation</td>
+                <td>CSI</td>
+                <td>22 Februray,2020</td>
+                <td>5</td>
+              </tr>
+            
+              <tr>
+                <td>4</td>
+                <td>Paper Presentation</td>
+                <td>CSI</td>
+                <td>22 Februray,2020</td>
+                <td>5</td>
+              </tr>
+             
+          </tbody>
+        </table>
         </div>
-        <br />
-        <div class="row">
-          <div class="col-md-6">
-            <label for="selectDrp">Select Activity:</label>
-            <select id="selectDrp">
-              <option value="">Select Activity</option>
-              <!--this list will come from backend from category table. Given data is for demo-->
-              <option value="">Paper Presentation</option>
-              <option value="">Workshop</option>
-            </select>
-          </div>
-        </div>
-        <br />
-        <div class="row">
-          <div class="col-md-6">
-            <label>Upload your Certificate:</label><br>
-            <label for="uploadFile" id="uploadcerti"><span class="fas fa-file-upload"></span></label>
-            <input type="file" name="uploadFile" id="uploadFile">
-            </select>
-          </div>
-        </div>
-<br>
-<div class="btnDiv">
-        <button class="btn" id="applybtn">Apply</button>
-      </div>
       </div>
     </div>
+</div>
 
     <script>
       function closeNav() {
