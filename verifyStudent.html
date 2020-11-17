@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS FILE LINK HERE-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/css/bootstrap.min.css"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/jquery.min.js"></script>
+    <title>Activity Portal</title>
+  </head>
+  <body>
+    <!------------ TOP NAVIGATION STARTS HERE------>
+    <div class="header" id="header">
+      <a href="admindashboard.html" class="logo">
+        <b>Activity Portal</b>
+      </a>
+      <a href="admindashboard.html">Home</a>
+      <a href="branch.html">Branch</a>
+      <a href="degree.html">Degree</a>
+      <a href="facultydashboard.html">Faculty</a>
+      <a href="studentdashboard.html" class="active">Student</a>
+      <a href="activitydashboard.html">Activity</a>
+
+      <a style="float: right">Hello,<b> Admin !</b></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-----------TOP NAVIGATION ENDS HERE----------->
+
+    <!--TABLE -->
+    <div class="container">
+      <!--DROPDOWN TO FILTER DEPT WISE-->
+      <div class="tableControl">
+        <div class="row">
+          <div class="col-md-9">
+            <select style="padding: 7px 20px">
+              <option value="">Sort By Branch</option>
+              <!--this list will come from backend from branch table. Given data is for demo-->
+              <option value="">Mechanical Engineering</option>
+              <option value="">Computer Engineering</option>
+            </select>
+          </div>
+          <input type="text" placeholder="Search" id="searchBtn" required />
+          <button class="btn btn-light">Search</button>
+        </div>
+      </div>
+      <br />
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Roll No.</th>
+              <th>Student Name</th>
+              <th>Branch</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Neha Desai</td>
+              <td>COMP</td>
+              <td>
+                <span id="viewmore" onclick="turnonoverlay()">View More</span>
+              </td>
+              <td>
+                <button class="btn btn-primary">Verify</button>
+                <button class="btn btn-danger">Reject</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>Sanchit Mishra</td>
+              <td>COMP</td>
+              <td>
+                <span id="viewmore" onclick="turnonoverlay()">View More</span>
+              </td>
+              <td>
+                <button class="btn btn-primary">Verify</button>
+                <button class="btn btn-danger">Reject</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>Omkar Sawant</td>
+              <td>COMP</td>
+              <td>
+                <span id="viewmore" onclick="turnonoverlay()">View More</span>
+              </td>
+              <td>
+                <button class="btn btn-primary">Verify</button>
+                <button class="btn btn-danger">Reject</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>4</td>
+              <td>Neha Palkar</td>
+              <td>COMP</td>
+              <td>
+                <span id="viewmore" onclick="turnonoverlay()">View More</span>
+              </td>
+              <td>
+                <button class="btn btn-primary">Verify</button>
+                <button class="btn btn-danger">Reject</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!---------------------------------VIEW MORE MODAL----------------------------------->
+    <div class="overlay" id="overlay">
+      <div class="overlay-contentView">
+        <div class="crossbtn" id="crossbtn" onclick="turnoffoverlay()">
+          <span class="fa fa-user"></span>
+        </div>
+
+        <h4>Student Details</h4>
+        <br />
+        <!--DISPLAY ROLL NO AND ERP ID-->
+        <div class="row">
+          <div class="col-md-3"><b>Roll No.: </b> 68</div>
+          <div class="col-md-2"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-6"><b>ERP ID: </b>S1032190708</div>
+        </div>
+
+        <!--DISPLAY BRANCH-->
+        <div class="row">
+          <div class="col-md-8"><b>Branch: </b>Computer Engineering</div>
+        </div>
+
+        <!--DISPLAY DIVISION-->
+        <div class="row">
+          <div class="col-md-3"><b>Division: </b>A</div>
+        </div>
+        <!--DISPLAY FULL NAME-->
+        <div class="row">
+          <div class="col-md-12"><b>Name: </b>Neha Devendra Desai</div>
+        </div>
+
+        <!--DISPLAY EMAIL ID-->
+        <div class="row">
+          <div class="col-md-12"><b>Email ID: </b>ndesai1503@gmail.com</div>
+        </div>
+
+        <!--DISPLAY MOBILE NUMBER-->
+        <div class="row">
+          <div class="col-md-12"><b>Mobile Number: </b> 9876543210</div>
+        </div>
+
+        <!--DISPLAY DEGREE TYPE AND ADMISSION TYPE-->
+        <div class="row">
+          <div class="col-md-6"><b>Degree Type: </b> BTECH</div>
+          <div class="col-md-6"><b>Admission Type: </b> DSE</div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12"><b>DOB: </b>15 March, 2001</div>
+        </div>
+      </div>
+    </div>
+    <!--VIEW MODAL ENDS HERE-->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("header");
+        if (x.className === "header") {
+          x.className += " responsive";
+        } else {
+          x.className = "header";
+        }
+      }
+
+      function turnoffoverlay() {
+        document.getElementById("overlay").style.display = "none";
+      }
+
+      function turnonoverlay() {
+        document.getElementById("overlay").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
